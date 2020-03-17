@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            height: 100px;
+            padding: 60px 250px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .wrap {
+            width: 100%;
+            margin: auto;
+            position: relative;
+        }
+
+        .font img {
+            width: 10%;
+            position: absolute;
+            left: 250px;
+            top: -50px;
+            cursor: pointer;
+        }
+
+        .font h3 {
+            width: 10%;
+            position: absolute;
+            left: 250px;
+            top: -20px;
+            cursor: pointer;
+        }
+
+        .font h3:hover {
+            color: #ee0;
+        }
+
+        .item {
+            position: absolute;
+            right: 200px;
+            top: -30px;
+            display: flex;
+            justify-content: space-around;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .one {
+            display: flex;
+        }
+
+        .one img {
+            width: 60%;
+            height: 550px;
+            margin-top: 10px;
+        }
+
+        .text1 {
+            margin-top: 80px;
+            margin-left: 20px;
+            font-size: 60px;
+        }
+
+        .text2 {
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 50px;
+            color: #ee0;
+        }
+
+        .one button {
+            width: 100px;
+            height: 50px;
+            line-height: 10px;
+            text-align: center;
+            border-radius: 20px;
+            background-color: #000;
+            color: #fff;
+            margin-left: 30px;
+            margin-top: 90px;
+        }
+
+        .one button:hover {
+            background-color: #ee0;
+            color: #000;
+        }
+
+        .two {
+
+            width: 100%;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .two-box {
+            position: relative;
+        }
+
+        .two img {
+            width: 250px;
+        }
+
+        .two .two-box p {
+            width: 250px;
+            position: absolute;
+            text-align: center;
+            bottom: 50px;
+        }
+
+        .two-box:hover {
+            color: #ee0;
+            cursor: pointer;
+        }
+
+        .three {
+            color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .three-box {
+            position: relative;
+        }
+
+        .three-box-text1 {
+            position: absolute;
+            font-size: 30px;
+            bottom: 150px;
+            left: 50px;
+        }
+
+        .three-box-text1 p {
+            padding-top: 20px;
+            text-decoration: underline;
+        }
+
+        .three-box-text1 p :hover {
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .three-box1 {
+            padding-left: 30px;
+        }
+
+        .three-box1-item1 {
+            position: relative;
+        }
+
+        .three-box1-text1 {
+            position: absolute;
+            padding: 10px 10px 10px 10px;
+            font-size: 30px;
+            bottom: 60px;
+            left: 30px;
+        }
+
+        .three-box1-text1 p {
+            padding-top: 10px;
+            text-decoration: underline;
+
+        }
+
+        .three-box1-text1 p :hover {
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .three-box1-item2 {
+            padding-top: 25px;
+            position: relative;
+        }
+
+        .three-box1-text2 {
+            position: absolute;
+            font-size: 25px;
+            bottom: 80px;
+            left: 30px;
+        }
+
+        .three-box1-text2 h3 {
+            padding: 10px 0;
+        }
+
+        .three-box1-text2 p {
+            padding-top: 10px;
+            text-decoration: underline;
+        }
+
+        .three-box1-text2 p :hover {
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+       
+
+        .four {
+            justify-content: center;
+            margin-top: 80px;
+        }
+
+        .four .title1 h3 {
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .fourbox {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .four-box1 img {
+            background-color: #ccc;
+            margin: 10px;
+        }
+
+        .four-box1 h3 {
+            padding-left: 10px;
+        }
+
+        .four-box1 h3:hover {
+            color: #ee0;
+            cursor: pointer;
+        }
+
+        .four-box1 p1 {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: line-through;
+            font-size: 20px;
+            color: gray;
+        }
+
+        .four-box1 p {
+            display: inline-block;
+            font-size: 20px;
+        }
+
+        .symbol button {
+            border-radius: 15px;
+            text-align: center;
+            border: none;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .symbol {
+            margin: 10px;
+        }
+
+        .five {
+            width: 100%;
+            height: 600px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .five img {
+            position: absolute;
+            right: 10px;
+            top: 120px;
+            margin-right: 150px;
+        }
+
+        .five .sale {
+            width: 550px;
+            height: 450px;
+            background-color: #fff;
+            position: absolute;
+            margin-left: 200px;
+            margin-top: 70px;
+        }
+
+        .sale h3 {
+            font-size: 70px;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .sale p {
+            font-size: 80px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sale button {
+            border-radius: 15px;
+            border: none;
+            font-size: 10px;
+            padding: 20px;
+            background-color: #ee0;
+            margin-left: 160px;
+            margin-top: 30px;
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+
+        .sale button:hover {
+            color: #fff;
+            background-color: #000;
+            cursor: pointer;
+        }
+
+        .six {
+            
+            display: flex;
+            justify-content: center;
+            background-color:#ee0;
+        }
+
+        .six-box {
+            position: relative;
+        }
+
+        .six-box-text1 {
+            position: absolute;
+            font-size: 30px;
+            bottom: 100px;
+            left: 50px;
+            color: #fff;
+        }
+
+        .six-box-text1 p {
+            padding-top: 10px;
+            text-decoration: underline;
+        }
+
+        .six-box-text1 p :hover {
+            color: #000;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .six-box1 {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 50px;
+        }
+        .six-box1 img
+        {
+            background-color: #ccc;
+            margin: 10px;
+        }
+        .six-box1-item1 p
+        {
+            display: inline-block;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h4><i class="fas fa-user"></i>My account</h4>
+    </div>
+    <div class="wrap">
+        <div class="font">
+            <img src="assets/font.jpg" alt="KARDONE">
+            <h3>HEALTLY FOOD</h3>
+        </div>
+        <div class="item">
+            <h4>HOME &nbsp ABOUT US &nbsp COLLECTIONS &nbsp BLOG &nbsp SALE &nbsp CONTACT US</h4>
+        </div>
+        <div class="one">
+            <img src="assets/asset 14.jpg" alt="水果">
+            <div class="one-text">
+                <div class="text1">
+                    <h3>Fresh and <br> Delicious
+                </div>
+                <div class="text2">
+                    <h3>ALL YEAR <br>ROUND!</h3>
+                </div>
+                <button>READ MORE</button>
+            </div>
+        </div>
+        <div class="two">
+            <div class="two-box">
+                <img src="assets/asset 50.jpg" alt="50">
+                <p><strong>Fresh Fruits</strong></p>
+            </div>
+            <div class="two-box">
+                <img src="assets/asset 51.jpg" alt="51">
+                <p><strong>Veggies</strong></p>
+            </div>
+            <div class="two-box">
+                <img src="assets/asset 52.jpg" alt="52">
+                <p><strong>Fish</strong></p>
+            </div>
+            <div class="two-box">
+                <img src="assets/asset 53.jpg" alt="53">
+                <p><strong>Nuts Seeds </strong></p>
+            </div>
+            <div class="two-box">
+                <img src="assets/asset 54.jpg" alt="54">
+                <p><strong>Bread</strong></p>
+            </div>
+            <div class="two-box">
+                <img src="assets/asset 55.jpg" alt="55">
+                <p><strong>Dairy</strong></p>
+            </div>
+        </div>
+        <div class="three">
+            <div class="three-box">
+                <img src="assets/asset 56.jpg " alt="56">
+                <div class="three-box-text1">
+                    <h3><strong>Best Quality Products</strong></h3>
+                    <p><strong>Shop now</strong></p>
+                </div>
+            </div>
+            <div class="three-box1">
+                <div class="three-box1-item1">
+                    <img src="assets/asset 57.jpg " alt="57">
+                    <div class="three-box1-text1">
+                        <h3><strong>Hot Deals: </strong></h3>
+                        <h3><strong>CRAZY PRICE $2.99</strong></h3>
+                        <p><strong>Shop now</strong></p>
+                    </div>
+                </div>
+                <div class="three-box1-item2">
+                    <img src="assets/asset 58.jpg " alt="58">
+                    <div class="three-box1-text2">
+                        <h3><strong>HURRY UP!</strong></h3>
+                        <h3><strong>Don’t miss you chance to be the first!</strong></h3>
+                        <p><strong>Shop now</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four">
+            <div class="title1">
+                <h3>Featured Products</h3>
+            </div>
+            <div class="fourbox">
+                <div class="four-box1">
+                    <img src="assets/asset 09.jpg" alt="09">
+                    <h3>P28 Foods Formulated...</h3>
+                    <p1>$26.00</p1>
+                    <p>$20.00</p>
+                    <div class="symbol">
+                        <button><i class="fas fa-shopping-cart"></i>ADD TO CART</button>
+                        <button><i class="fas fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+
+                </div>
+                <div class="four-box1">
+                    <img src="assets/asset 10.jpg" alt="10">
+                    <h3>P28 Foods Formulated...</h3>
+                    <p1>$29.00 </p1>
+                    <p>$36.00</p>
+                    <div class="symbol">
+                        <button><i class="fas fa-shopping-cart"></i>CHOOSE VARIANT</button>
+                        <button><i class="fas fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="four-box1">
+                    <img src="assets/asset 11.jpg" alt="11">
+                    <h3>KIND Nuts & Spices,...</h3>
+                    <p1>$12.00</p1>
+                    <p>$30.00</p>
+                    <div class="symbol">
+                        <button><i class="fas fa-shopping-cart"></i>CHOOSE VARIANT</button>
+                        <button><i class="fas fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="four-box1">
+                    <img src="assets/asset 12.jpg" alt="12">
+                    <h3>Justin′s Nut Butter...</h3>
+                    <p1>$33.00 </p1>
+                    <p>$22.00</p>
+                    <div class="symbol">
+                        <button><i class="fas fa-shopping-cart"></i>ADD TO CART</button>
+                        <button><i class="fas fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="five">
+            <img src="assets/asset 40.jpg" alt="40">
+            <div class="sale">
+                <h3><strong>20% OFF</strong></h3>
+                <P>Fresh Berries</P>
+                <button>SHOP NOW</button>
+            </div>
+        </div>
+        <div class="six">
+            <div class="six-box">
+                <img src="assets/asset 59.jpg " alt="59">
+                <div class="six-box-text1">
+                    <h3><strong>Looking for something</strong></h3>
+                    <h4><strong>spacial?</strong></h4>
+                    <p><strong>Shop now</strong></p>
+                </div>
+            </div>
+            <div class="six-box1">
+                <div class="six-box1-item1">
+                    <img src="assets/asset 41.jpg" alt="41">
+                    <h3>P28 Foods Formulated...</h3>
+                    <h4>$29.00 </h4>
+                    <p>$36.00</p>
+                </div>
+                <div class="six-box1-item2">
+                    <img src="assets/asset 43.jpg" alt="43">
+                    <h3>Nabisco Mini Nilla W...</h3>
+                    <h4>$30.00 </h4>
+                </div>
+                <div class="six-box1-item3">
+                    <img src="assets/asset 45.jpg" alt="45">
+                    <h3>KIND Nuts & Spices,...</h3>
+                    <h4>$12.00</h4>
+                    <p>$30.00</p>
+                </div>
+                <div class="six-box1-item4">
+                    <img src="assets/asset 47.jpg" alt="47">
+                    <h4>Kashi Cereal Bar, Ri...</h4>
+                    <p>$23.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

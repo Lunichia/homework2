@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota</title>
+    <style>
+        *{
+            margin: auto;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap
+        {
+            width: 900px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        } 
+        .box
+        {
+            width: 900px;
+            margin: 400px 0px;
+            position: relative;
+        }
+        .background{
+            width: 400px;
+            height: 300px;         
+            background-color: #eee;
+            position:absolute;
+            right: -100px;
+            top: -80px;
+        }
+        .wrap>.box:nth-child(even)>.background
+        {
+            width: 500px;
+            height: 400px;
+            left:250px;
+            top: -60px;
+        }
+        .mainpic
+        {
+            position: absolute;
+            right: 0;
+        }
+        .wrap>.box:nth-child(even)>.mainpic
+        {
+           left: 0;
+        }
+        .title
+        {
+            position: absolute;
+            left:-10px;
+            top: -135px;
+        }
+        .wrap>.box:nth-child(even)>.title
+        {
+            right:-800px ;
+            top:-135px;
+        }
+        .text
+        {
+            position: absolute;
+            left: -90px;
+            top:400px
+        }
+        .wrap>.box:nth-child(even)>.text
+        {
+            right:-500px;
+            top:400px
+        }
+        .playbuttom
+        {
+            position: absolute;
+            right: -10px;
+            top: 230px;
+        }
+        .wrap>.box:nth-child(even)>.playbuttom
+        {
+            left:-660px ;
+            top:230px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+
+            <div class="background"></div>
+            <img class="mainpic" src="pic/01-2.jpg" alt="圖片1">
+            <img class="title" src="pic/01-1.jpg" alt="操作樂趣">
+            <img class="text" src="pic/01-3.jpg" alt="段落1">
+            <img class="playbuttom" src="pic/bottom.jpg" alt="按鈕">
+        </div>
+
+        <div class="box">
+
+            <div class="background"></div>
+            <img class="mainpic" src="pic/02-2.jpg" alt="圖片2">
+            <img class="title" src="pic/02-1.jpg" alt="安全守護">
+            <img class="text" src="pic/02-3.jpg" alt="段落2">
+            <img class="playbuttom" src="pic/bottom.jpg" alt="按鈕">
+        </div>
+
+        <div class="box">
+
+            <div class="background"></div>
+            <img class="mainpic" src="pic/03-2.jpg" alt="圖片3">
+            <img class="title" src="pic/03-1.jpg" alt="乘坐舒適">
+            <img class="text" src="pic/03-3.jpg" alt="段落3">
+            <img class="playbuttom" src="pic/bottom.jpg" alt="按鈕">
+        </div>
+
+        <div class="box">
+
+            <div class="background"></div>
+            <img class="mainpic" src="pic/04-2.jpg" alt="圖片4">
+            <img class="title" src="pic/04-1.jpg" alt="以人為本">
+            <img class="text" src="pic/04-3.jpg" alt="段落4">
+            <img class="playbuttom" src="pic/bottom.jpg" alt="按鈕">
+        </div>
+
+        <div class="box">
+
+            <div class="background"></div>
+            <img class="mainpic" src="pic/05-2.jpg" alt="圖片5">
+            <img class="title" src="pic/05-1.jpg" alt="引以為傲">
+            <img class="text" src="pic/05-3.jpg" alt="段落5">
+            <img class="playbuttom" src="pic/bottom.jpg" alt="按鈕">
+        </div>
+
+    </div>
+</body>
+</html>
