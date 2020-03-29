@@ -18,6 +18,9 @@
             font-size: 20px;
             cursor: pointer;
         }
+        .header a:hover{
+            color: #ee0;
+        }
 
         .wrap {
             width: 100%;
@@ -53,6 +56,12 @@
             justify-content: space-around;
             font-size: 15px;
             cursor: pointer;
+            font-family:sans-serif;
+        }
+        .wrap .navBar{
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .one {
@@ -79,8 +88,8 @@
         }
 
         .one button {
-            width: 100px;
-            height: 50px;
+            width: 200px;
+            height: 60px;
             line-height: 10px;
             text-align: center;
             border-radius: 20px;
@@ -88,6 +97,7 @@
             color: #fff;
             margin-left: 30px;
             margin-top: 90px;
+            border: none;
         }
 
         .one button:hover {
@@ -206,7 +216,7 @@
             text-decoration: underline;
         }
 
-       
+
 
         .four {
             justify-content: center;
@@ -255,9 +265,14 @@
         .symbol button {
             border-radius: 15px;
             text-align: center;
-            border: none;
             font-size: 15px;
             padding: 10px;
+            border: 1px solid #000;
+
+        }
+
+        .symbol button:hover {
+            background-color: #ee0;
         }
 
         .symbol {
@@ -318,10 +333,9 @@
         }
 
         .six {
-            
             display: flex;
             justify-content: center;
-            background-color:#ee0;
+            padding: 100px 100px;
         }
 
         .six-box {
@@ -351,16 +365,166 @@
             display: flex;
             flex-wrap: wrap;
             padding-left: 50px;
+            padding-top: 100px;
         }
-        .six-box1 img
-        {
+
+        .six-box p {
+            font-size: 30px;
+            line-height: 30px;
+        }
+
+
+        .six-box1-item1 h1 {
+            font-size: 40px;
+            display: flex;
+            flex-direction: column;
+            vertical-align: middle;
+            margin-left: 250px;
+            padding-bottom: 10px;
+        }
+
+        .six-box1-item1 img {
             background-color: #ccc;
-            margin: 10px;
+            margin-top: 60px;
         }
-        .six-box1-item1 p
-        {
-            display: inline-block;
+
+        .six-box1-item2 img {
+            background-color: #ccc;
+            margin-top: 60px;
         }
+
+        .six-box1-item2 {
+            padding-top: 60px;
+        }
+
+        .six-box1 .shop_car {
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #000;
+            font-size: 15px;
+            padding: 10px;
+
+        }
+
+        .six-box1 button {
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #000;
+            font-size: 15px;
+            padding: 10px;
+
+        }
+
+        .six-box1 button:hover {
+            background-color: #ee0;
+        }
+
+        .six-box1 .no_shop_car {
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #000;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .six-box1 .no_shop_car {
+            color: #eee;
+            border: 1px solid #eee;
+        }
+
+        .six-box1 .no_shop_car:hover {
+            background-color: #fff;
+        }
+
+
+        .seven h3 {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 70px;
+        }
+
+        .box {
+
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            justify-content: space-around;
+            padding: 130px;
+            position: relative;
+        }
+
+        .itemtxt {
+            justify-content: space-around;
+        }
+
+        .itemtxt a:hover {
+            color: #ee0;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #eee;
+        }
+
+        .link {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer .link a {
+            padding: 10px 0;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .footer h3 {
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+
+        .text_ourshop .phonenumber {
+            padding-top: 40px;
+        }
+
+        .text_ourshop a {
+            text-decoration: none;
+            color: #000;
+        }
+
+
+        .footer .logo a i {
+            background-color: #000;
+            color: white;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 13px 10px 8px 10px;
+            border-radius: 50%;
+            font-size: 25px;
+        }
+        .footer .logo a:hover i {
+            color: #000;
+            background-color: #fff;
+        } 
+
+
+
+        .footer a:hover {
+            color: #ee0;
+        }
+
+        .end {
+            width: 100%;
+            height: 40px;
+            background-color: #ee0;
+            text-align: center;
+            padding-top: 25px;
+        }
+
 
        
     </style>
@@ -369,15 +533,19 @@
 <body>
 
     <div class="header">
-        <h4><i class="fas fa-user"></i>My account</h4>
+        <a><i class="fas fa-user"></i>My account</a>
     </div>
+    
     <div class="wrap">
-        <div class="font">
-            <img src="assets/font.jpg" alt="KARDONE">
-            <h3>HEALTLY FOOD</h3>
-        </div>
-        <div class="item">
-            <h4>HOME &nbsp ABOUT US &nbsp COLLECTIONS &nbsp BLOG &nbsp SALE &nbsp CONTACT US</h4>
+        <div class="navBar">
+            <div class="font">
+                <img src="assets/font.jpg" alt="KARDONE">
+                <h3>HEALTLY FOOD</h3>
+            </div>
+    
+            <div class="item">
+                <h4>HOME &nbsp ABOUT US &nbsp COLLECTIONS &nbsp BLOG &nbsp SALE &nbsp CONTACT US</h4>
+            </div>
         </div>
         <div class="one">
             <img src="assets/asset 14.jpg" alt="水果">
@@ -391,6 +559,7 @@
                 <button>READ MORE</button>
             </div>
         </div>
+
         <div class="two">
             <div class="two-box">
                 <img src="assets/asset 50.jpg" alt="50">
@@ -417,6 +586,7 @@
                 <p><strong>Dairy</strong></p>
             </div>
         </div>
+
         <div class="three">
             <div class="three-box">
                 <img src="assets/asset 56.jpg " alt="56">
@@ -444,6 +614,7 @@
                 </div>
             </div>
         </div>
+
         <div class="four">
             <div class="title1">
                 <h3>Featured Products</h3>
@@ -496,6 +667,7 @@
                 </div>
             </div>
         </div>
+
         <div class="five">
             <img src="assets/asset 40.jpg" alt="40">
             <div class="sale">
@@ -504,6 +676,7 @@
                 <button>SHOP NOW</button>
             </div>
         </div>
+
         <div class="six">
             <div class="six-box">
                 <img src="assets/asset 59.jpg " alt="59">
@@ -515,28 +688,120 @@
             </div>
             <div class="six-box1">
                 <div class="six-box1-item1">
-                    <img src="assets/asset 41.jpg" alt="41">
-                    <h3>P28 Foods Formulated...</h3>
-                    <h4>$29.00 </h4>
-                    <p>$36.00</p>
+                    <h1>On Sale</h1>
+                    <div class="pic1">
+                        <img src="assets/asset 41.jpg" alt="41">
+                        <h3>P28 Foods Formulated...</h3>
+                        <p>$29.00 – $36.00</p>
+                        <button class="shop_car"><i class="fas fa-shopping-cart"></i>CHOOSE VARIANT</button>
+                        <button><i class="far fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+
+                    <div class="pic2">
+                        <img src="assets/asset 45.jpg" alt="45">
+                        <h3>KIND Nuts & Spices,...</h3>
+                        <p>$12.00-$30.00</p>
+                        <button class="shop_car"><i class="fas fa-shopping-cart"></i>CHOOSE VARIANT</button>
+                        <button><i class="far fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
                 </div>
+
                 <div class="six-box1-item2">
-                    <img src="assets/asset 43.jpg" alt="43">
-                    <h3>Nabisco Mini Nilla W...</h3>
-                    <h4>$30.00 </h4>
+                    <div class="pic3">
+                        <img src="assets/asset 43.jpg" alt="43">
+                        <h3>Nabisco Mini Nilla W...</h3>
+                        <p>$30.00 </p>
+                        <button class="shop_car"><i class="fas fa-shopping-cart"></i>ADD TO CART</button>
+                        <button><i class="far fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                    <div class="pic4">
+                        <img src="assets/asset 47.jpg" alt="47">
+                        <h4>Kashi Cereal Bar, Ri...</h4>
+                        <p>$23.00</p>
+                        <button class="no_shop_car"><i class="fas fa-shopping-cart"></i>UNAVLAILABLE</button>
+                        <button><i class="far fa-eye"></i></button>
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
                 </div>
-                <div class="six-box1-item3">
-                    <img src="assets/asset 45.jpg" alt="45">
-                    <h3>KIND Nuts & Spices,...</h3>
-                    <h4>$12.00</h4>
-                    <p>$30.00</p>
+
+            </div>
+        </div>
+
+        <div class="seven">
+            <h3>Featured Posts</h3>
+            <div class="box">
+                <div class="itemtxt">
+                    <img src="assets/asset 60.jpg" alt="">
+                    <h4>29 January</h4>
+                    <a><strong>12 Heavenly Fruits and Honey</strong></a>
+                    <p>Caffeine and sugar may give you an energy spike, but the crash that follows will leave you
+                        feeling even more tired than before. However, great...</p>
                 </div>
-                <div class="six-box1-item4">
-                    <img src="assets/asset 47.jpg" alt="47">
-                    <h4>Kashi Cereal Bar, Ri...</h4>
-                    <p>$23.00</p>
+                <div class="itemtxt">
+                    <img src="assets/asset 61.jpg" alt="">
+                    <h4>29 January</h4>
+                    <a><strong>The Great Start of Your Weight</strong></a>
+                    <p>Kids need energy for sports and play, so it’s important that they’re consuming a nutrient-dense
+                        snack about an hour before their activity that contains carbohydrates....</p>
+                </div>
+                <div class="itemtxt">
+                    <img src="assets/asset 62.jpg" alt="">
+                    <h4>29 January</h4>
+                    <a><strong>The Products that Help You Boost the Energy</strong></a>
+                    <p>Hello, my dears! My name is mary and here, in my blog, I want to share with you my findings and
+                        useful thoughts about making...</p>
                 </div>
             </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="text_information">
+                <h3>Information</h3>
+                <div class="link">
+                    <a href="#">Home</a>
+                    <a href="#">Services</a>
+                    <a href="#">Blog</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="text_myaccount">
+                <h3>My Account</h3>
+                <div class="link">
+                    <a href="#">My Account</a>
+                    <a href="#">Order History</a>
+                    <a href="#">Address</a>
+                    <a href="#">Wishlist</a>
+                </div>
+            </div>
+
+            <div class="text_ourshop">
+                <h3>Our Shop</h3>
+                <p>Adderss</p>
+                <p>4578 Marmora St, San Francisco D04 89GR</p>
+                <p class="phonenumber">Phone</p>
+                <a href="#">1-800-1234-567</a>
+            </div>
+            <div class="text_newsletter">
+                <h3>Newsletter</h3>
+                <p>Join our mailing list</p>
+            </div>
+            <div class="logo">
+                <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                <a href="#"> <i class="fab fa-twitter"></i> </a>
+                <a href="#"> <i class="fab fa-instagram"></i></a>
+                <a href="#"> <i class="fab fa-youtube"></i></a>
+
+            </div>
+        </div>
+
+        <div class="end">
+            &copy;Healtly Food .Powered by Shopify
         </div>
     </div>
 </body>
